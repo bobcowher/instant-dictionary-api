@@ -1,6 +1,7 @@
 import justpy as jp
 import definition
 import json
+from documentation import Documentation
 
 class Api:
 
@@ -20,5 +21,6 @@ class Api:
 
         return wp
 
-jp.Route("/", Api.serve)
+jp.Route("/api", Api.serve)
+jp.Route("/documentation", Documentation.serve)
 jp.justpy()
